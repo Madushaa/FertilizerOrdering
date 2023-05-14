@@ -1,0 +1,45 @@
+<app-search></app-search>
+
+
+<ul>
+  <li *ngFor="let fertilizer of fertilizer">
+      <a routerLink="/fertilizer/{fertilizer.id}}">
+        <img [src]="fertilizer.imageUrl" [alt]="fertilizer.name"/>
+        <div class="content">
+          <div class="name">
+            {{fertilizer.name}}
+          </div>
+          <span class="favorite{{fertilizer.favorite?'':'not'}}">
+            ❤
+          </span>
+          <div class="stars">
+
+
+          </div>
+          <div class="product-item-footer">
+            <div class="origins">
+              <span *ngFor="let origin of fertilizer.orgins">
+                {{origin}}
+              </span>
+            </div>
+              <div class="cook-time">
+                <span>🕐</span>
+                {{fertilizer.cooktime}}
+
+              </div>
+          </div>
+          <div class="price">
+            <span>
+              {{fertilizer.price | currency}}
+            </span>
+
+          </div>
+        </div>
+      </a>
+
+  </li>
+
+
+
+
+</ul>

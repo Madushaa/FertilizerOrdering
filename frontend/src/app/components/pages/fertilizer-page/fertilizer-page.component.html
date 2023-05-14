@@ -1,0 +1,21 @@
+<div class="container">
+  <img [src]="fertilizer.imageUrl" [alt]="fertilizer.name"/>
+
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        {{fertilizer.name}}
+      </span>
+      <span class="favorite {{fertilizer.favorite? '': 'not'}}">❤</span>
+    </div>
+
+
+   <div class="price">
+    <span>
+      {{fertilizer.price}}
+
+    </span>
+
+   </div>
+  </div>
+</div>
